@@ -21,7 +21,7 @@ public class SimpleBST<K,V> implements SimpleMap<K,V> {
   /**
    * The comparator used to determine the ordering in the tree.
    */
-  Comparator<K> comparator;
+  Comparator<? super K> comparator;
 
   /**
    * The size of the tree.
@@ -63,7 +63,18 @@ public class SimpleBST<K,V> implements SimpleMap<K,V> {
 
   @Override
   public V set(K key, V value) {
-    return null;        // STUB
+    BSTNode temp = this.root;
+    while(temp != null){
+    if(this.comparator.compare(temp.key, key)){
+      V tmp = this.root.value;
+      this.root.value = value;
+      return tmp;
+    }
+    else if(this.comparator.compare(temp.key, key) < 0){
+      temp = temp.
+    }
+    }
+  }
   } // set(K,V)
 
   @Override

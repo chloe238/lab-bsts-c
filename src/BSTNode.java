@@ -40,7 +40,4 @@ class BSTNode<K,V> {
     this.left = null;
     this.right = null;
   } // BSTNode(K,V)
-
-  public
-
 } // class BSTNode<K,V>
